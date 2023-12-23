@@ -1,0 +1,288 @@
+@media only screen and (max-width: 600px) {
+
+    .container{
+        padding: 1.5rem 2.3125rem;
+    }
+    
+    nav ul{
+        display: none;
+    }
+
+    nav .mode{
+        display: flex;
+    }
+
+    nav .mode i{
+        display: flex;
+        margin: 0 10px;
+    }
+
+    nav .mode a{
+        text-decoration: none;
+        display: flex;
+        color: #333;
+}
+
+    nav .mode:hover ul{
+        display: block;
+        /* flex-wrap: wrap; */
+        /* flex-direction: column; */
+    }
+
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-content{
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    header .header-content p{
+        margin: auto;
+        width: 100%;
+    }
+
+    header .header-content .btn-group{
+        margin-top: 15px;
+        width: 100%;
+        margin: auto;
+    }
+    
+    header picture{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .chefs-section .chefs-cards{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    .gallery .gallery-photos {
+        flex-direction: column;
+    }
+
+    .gallery .gallery-photos .cul{
+        width: 100%;
+    }
+
+    .contact .details{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact .details .cul{
+        width: 100%;
+        margin: 0;
+    }
+
+    form .group-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form .group-input input{
+        width: 100%;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .container .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container .about h3{
+        width: 100%;
+    }
+
+    footer .container .about p{
+        text-align: center;
+    }
+
+    footer .container .about ul{
+        width: 100%;
+    }
+
+    footer .subscribtion .links ul li{
+        width: 100%;
+    }
+
+    footer .subscribtion h3{
+        text-align: center;
+    }
+
+    footer .subscribtion p{
+        text-align: center;
+    }
+
+    footer .subscribtion .email{
+        display: flex;
+    }
+
+    footer .contact-details{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+
+    .container{
+        padding: 1.5rem 2.3125rem;
+    }
+    
+    nav ul{
+        display: none;
+    }
+
+    nav .mode{
+        display: flex;
+    }
+
+    nav .mode i{
+        display: flex;
+        margin: 0 10px;
+    }
+
+    nav .mode a{
+        text-decoration: none;
+        display: flex;
+        color: #333;
+}
+
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-content{
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    header .header-content p{
+        margin: auto;
+        width: 100%;
+    }
+
+    header .header-content .btn-group{
+        margin-top: 15px;
+        width: 60%;
+        margin: auto;
+    }
+    
+    header picture{
+        margin-top: 20px;
+        width: 80%;
+    }
+
+    .chefs-section .chefs-cards{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+    }
+
+    .gallery .gallery-photos {
+        flex-direction: column;
+    }
+
+    .gallery .gallery-photos .cul{
+        width: 100%;
+    }
+
+    .contact .details{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contact .details .cul{
+        width: 100%;
+        margin: 0;
+    }
+
+    form .group-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form .group-input input{
+        width: 100%;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .container .about{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container .about h3{
+        width: 100%;
+    }
+
+    footer .container .about p{
+        text-align: center;
+    }
+
+    footer .container .about ul{
+        width: 100%;
+    }
+
+    footer .subscribtion .links ul li{
+        width: 100%;
+    }
+
+    footer .subscribtion h3{
+        text-align: center;
+    }
+
+    footer .subscribtion p{
+        text-align: center;
+    }
+
+    footer .subscribtion .email{
+        display: flex;
+    }
+
+    footer .contact-details{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+.container{
+    padding: 1.5rem 2.3125rem;
+    }
+
+    .header-content{
+        width: 50%;
+    }
+
+header picture{
+    width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .container{
+        padding: 1.5rem 10.3125rem;
+    }
+}

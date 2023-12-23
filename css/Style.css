@@ -1,0 +1,687 @@
+html{scroll-behavior: smooth;}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --margin:20px 100px;
+    --padding: 1.5625rem 0.3125rem;
+
+    --nav-font: font-family: 'Alegreya', serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+    --title-font: 'Amatic SC', sans-serif;
+
+    --default-color: #212529;
+    --prime-color: #ce1212;
+    --color-light-grey: #eee;
+    --second-color: #7f7f90;
+}
+
+.section-bg {
+    background-color: var(--color-light-grey);
+}
+
+/* Container */
+
+.container{
+    padding: 1.5rem 20.3125rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Container */
+
+/* start navbar */
+
+nav{
+    background-color: var(--color-light);
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+    background-color: #fff;
+}
+
+nav .container{
+    --padding: 0.5625rem 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    font-family: var(--nav-font);
+}
+
+nav ul li{
+    padding: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--default-color);
+    font-weight: bold;
+    color: var(--second-color);
+    transition: 0.2s;
+}
+
+nav ul li a:hover{
+    color: var(--default-color);
+}
+
+nav ul li .home{
+    color: #212529;
+}
+
+nav ul li .home::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    width: 40px;
+    height: 2px;
+    background-color: var(--prime-color);   
+}
+
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    width: 0;
+    height: 2px;
+    background-color: var(--prime-color);
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after{
+    width: 40px;
+}
+
+nav h1{
+    color: var(--default-color);
+    font-size: 30px;
+    font-weight: bolder;
+    position: relative;
+}
+
+nav h1::after{
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: -2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--prime-color);
+}
+
+nav .mode i{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav .mode a{
+    display: none;
+}
+
+/* end navbar */
+
+/* Start Header */
+
+header{
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-content h2{
+    font-size: 4.0625rem;
+    font-weight: 600;
+    font-family: var(--title-font);
+    color: var(--default-color);
+}
+
+header .header-content p{
+    margin-top: 20px;
+    font-size: 10px;
+    font-family: var(--nav-font);
+    color: #4f4f5a;
+    line-height: 1.6;
+    width: 65%;
+}
+
+header .header-content .btn-group{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+header .header-content .btn-group a{
+    text-decoration: none;
+    padding:0.625rem 1.5625rem;
+    font-size: 10px;
+
+}
+
+header .header-content .btn-group .table-btn{
+    background-color: #ce1212;
+    color: #fff;
+    border-radius: 0 100vh 100vh;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+
+header .header-content .btn-group .table-btn:hover{
+    background-color: rgb(246, 40, 3);
+}
+
+header .header-content .btn-group .video-btn{
+    display: flex;
+    align-items: center;
+    color: var(--default-color);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+header .header-content .btn-group .video-btn:hover{
+    color: rgb(246, 40, 3);
+}
+
+header .header-content .btn-group .video-btn .icon{
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:linear-gradient(to right, var(--prime-color) 0 50%, transparent 50% 100%) ;
+    position: relative;
+}
+
+header .header-content .btn-group a i{
+    position: relative;
+}
+
+header .header-content .btn-group .video-btn .icon::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+header picture{
+    width: 40%;
+}
+
+header picture img{
+    max-width: 100%;
+    filter: drop-shadow(4px 4px 9px #000a);
+    display: block;
+}
+
+header picture img:hover {
+    /* Start the shake animation */
+    animation: shake 1s;
+
+    /* When the animation is finished, start again*/
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+    transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+    transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+    transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+    transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+/* End Header */
+
+/* Start Title */
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0 40px;
+
+}
+
+.title h2{
+    font-family: var(--nav-font);
+    color: var(--second-color);
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.title p{
+    font-size: 44px;
+    font-family: var(--title-font);
+}
+
+.title p span{
+    color: var(--prime-color);
+}
+
+/* End Title */
+
+/* Start chefs section */
+
+.chefs-section{
+    text-align: center;
+}
+
+.chefs-cards{
+    display: flex;
+    gap: 2rem;
+}
+
+.card{
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card img{
+    width: 100%;
+}
+
+picture{
+    position: relative;
+}
+
+.chefs-cards .card picture:before{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-image: url(../imgs/team-shape.svg);
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.75rem;
+}
+
+.chefs-cards .card .card-content{
+    padding: 0 20px;
+}
+
+.chefs-cards .card .card-content h3{
+    margin: 5px 0;
+}
+
+.chefs-cards .card .card-content span{
+    color: var(--second-color);
+}
+
+.chefs-cards .card .card-content p{
+    color: var(--second-color);
+    padding: 10px 0;
+    font-style: italic;
+    line-height: 1.6em;
+}
+
+.social{
+    background-color: rgba(255, 255, 255, 0.3);
+    width: fit-content;
+    padding: 5px 5px;
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    transition: 0.4s 0.4s;
+    border-radius: 5px;
+}
+
+.card:hover .social{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.social li{
+    padding: 10px;
+    list-style: none;
+
+}
+
+.social li i{
+    font-size: 18px;
+    color: #37373f66;
+    transition: 0.4s;
+}
+
+.social li i:hover{
+    color: var(--default-color);
+}
+
+/* End chefs section */
+
+/* Start Gallery section */
+
+.gallery{
+    margin-top: 80px;
+    background-color: #eee;
+}
+
+.gallery .gallery-photos{
+    display: flex;
+    gap: 1.25rem;
+}
+
+.cul{
+    width: calc(100%/3);
+    position: relative;
+}
+
+.cul img{
+    width: 100%;
+    border: 5px solid #fff;
+    margin: 5px 0;
+}
+
+/* End Gallery section */
+
+/* Start Contact Section */
+
+iframe{
+    width: 100%;
+}
+
+.contact .details{
+    display: flex;
+    gap: 10px;
+}
+
+.contact .details .cul{
+    margin-top: 20px;
+    width: 50%;
+}
+
+.contact .details .content{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 10px;
+}
+
+.contact .details h3{
+    color: #7f7f90;
+    padding: 5px;
+    padding: 10px;
+}
+
+.contact .details .cul .icon{
+    width: 40px;
+    height: 40px;
+    background-color: var(--prime-color);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 0 1.875rem #00000014;
+}
+
+form .group-input{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+form .group-input input{
+    width: calc(100% / 2);
+}
+
+form input{
+    padding: 15px 10px;
+    border: 1px solid #eee;
+}
+
+form textarea{
+    padding: 15px 10px;
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+form button{
+    background-color: var(--prime-color);
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+
+form button:hover{
+    background-color:rgb(246, 40, 3) ;
+}
+
+/* End Contact Section */
+
+/* Start Footer */
+
+footer{
+    background-image: url(../imgs/textured-metal-background.jpg);
+    color: #fff;
+}
+footer .container{
+    display: flex;
+    gap: 2rem;
+}
+
+footer .about{
+    width: 30%;
+}
+
+footer .about .f-logo{
+    display: flex;
+    gap: 0.5rem;
+
+}
+footer .about .f-logo img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+footer .about .f-logo h1{
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+footer .about .f-logo h1:after{
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    right: -4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--prime-color);
+}
+
+footer .about h3{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd6;
+}
+
+footer .about p{
+    line-height: 1.5em;
+}
+
+footer .about ul{
+    margin-top: 15px;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+
+footer .subscribtion h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+footer .subscribtion p{
+    line-height: 1.5em;
+    margin-bottom: 5px;
+}
+
+footer .subscribtion input {
+    width: 85%;
+    padding: 10px;
+}
+
+footer .subscribtion button{
+padding: 12px 9px;
+background-color: var(--prime-color);
+border: none;
+color: #fff;
+transition: 0.2s;
+}
+
+footer .subscribtion button:hover{
+    background-color: rgb(246, 40, 3);
+}
+
+footer .subscribtion .links{
+    margin-top: 15px;
+}
+
+footer .subscribtion .links h3{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+footer .subscribtion .links .columns{
+    display: flex;
+}
+
+footer .subscribtion .links ul{
+    display: flex;
+    width: 50%;
+    list-style: none;
+}
+
+footer .subscribtion .links .cul-1{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .subscribtion .links .cul-2{
+    display: flex;
+    flex-direction: column;
+}
+
+footer .subscribtion .links ul li{
+    width: 50%;
+    padding: 5px;
+    transition: 0.5s;
+}
+
+footer .subscribtion .links ul li:hover{
+    background-color: rgba(68, 75, 81, 0.5);
+    margin-left: 10px;
+}
+
+
+footer .contact-details{
+    width: 28%;
+}
+
+footer .contact-details ul{
+    list-style: none;
+}
+
+footer .contact-details h3{
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+footer .contact-details i{
+    font-size: 20px;
+    color: var(--prime-color);
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+footer .contact-details span{
+    font-size: 10px;
+}
+/* End Footer */
